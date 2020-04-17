@@ -49,3 +49,7 @@ yarn e2e
 ```bash
 yarn build
 ```
+
+# 注意
+
+fontとiconはCDNを使用していますので、オフラインだと画面が崩れます。

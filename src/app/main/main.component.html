@@ -1,0 +1,12 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <prct-sidenav-list (sidenavClose)="sidenav.close()"></prct-sidenav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <prct-header (sidenavToggle)="sidenav.toggle()"></prct-header>
+    <div #appBody class="app-body" (scroll)="handleScroll($event)">
+      <router-outlet></router-outlet>
+      <prct-footer></prct-footer>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

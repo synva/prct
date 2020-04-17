@@ -1,0 +1,32 @@
+<mat-nav-list>
+  <mat-list-item>
+    <a matLine routerLink="/">Top</a>
+    <button mat-icon-button color="primary">
+      <mat-icon>info</mat-icon>
+    </button>
+  </mat-list-item>
+  <mat-list-item>
+    <a matLine routerLink="/sample">Sample</a>
+    <button mat-icon-button color="primary">
+      <mat-icon>waves</mat-icon>
+    </button>
+  </mat-list-item>
+  <mat-list-item *ngIf="!user.isAnonymous">
+    <a matLine routerLink="/charge">Charge</a>
+    <button mat-icon-button color="primary">
+      <mat-icon>dvr</mat-icon>
+    </button>
+  </mat-list-item>
+  <mat-list-item *ngIf="user.isAdministrator || user.isVIP">
+    <a matLine routerLink="/treasure">Treasure</a>
+    <button mat-icon-button color="primary">
+      <mat-icon>map</mat-icon>
+    </button>
+  </mat-list-item>
+  <mat-list-item *ngIf="user.isAdministrator">
+    <a matLine routerLink="/admin">Administrator</a>
+    <button mat-icon-button color="primary">
+      <mat-icon>waves</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-nav-list>

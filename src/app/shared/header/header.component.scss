@@ -1,0 +1,32 @@
+$headerHeight: 80px;
+
+mat-toolbar {
+  position: fixed;
+  z-index: 999;
+  height: $headerHeight;
+}
+
+.nav-icon {
+  height: $headerHeight;
+  margin-left: 20px;
+  padding: 0 10px;
+
+  img {
+    height: 75px;
+  }
+}
+
+.nav-header {
+  height: 100%;
+
+  .mat-button {
+    font-size: 18px;
+    font-weight: bold;
+    height: 100%;
+    width: 160px;
+  }
+
+  .mat-icon-button {
+    margin-left: 20px;
+  }
+}

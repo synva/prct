@@ -1,0 +1,17 @@
+$headerHeight: 80px;
+
+.mat-sidenav {
+  width: 230px;
+}
+
+.app-body {
+  background: #fff;
+  margin-top: $headerHeight;
+  overflow: auto;
+  height: calc(100vh - 80px);
+  padding-bottom: 20px;
+}
+
+.mat-sidenav {
+  width: 300px;
+}

@@ -1,0 +1,9 @@
+<mat-card class="errorPage">
+  <div class="errorCode">
+    <h1>{{errorCode}}</h1>
+  </div>
+  <div style="text-align: center;">
+    <h2>{{'Error! ' + (errorDetail ? errorDetail : '')}}</h2>
+    <button mat-raised-button color="primary" [routerLink]="['/']">Try again</button>
+  </div>
+</mat-card>

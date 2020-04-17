@@ -1,0 +1,25 @@
+<mat-toolbar color="primary" fxLayoutAlign="space-between center" class="mat-elevation-z2">
+  <div fxLayoutAlign="center center">
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <button mat-button routerLink="/" class="nav-icon"><img src="../../../assets/favicon.png"></button>
+  </div>
+  <div fxLayoutAlign="center center" class="nav-header">
+    <button fxHide.lt-md mat-button routerLink="/sample">
+      Sample
+    </button>
+    <button fxHide.lt-md mat-button routerLink="/charge" *ngIf="!user.isAnonymous">
+      Charge
+    </button>
+    <button fxHide.lt-md mat-button routerLink="/treasure" *ngIf="user.isAdministrator || user.isVIP">
+      Treasure
+    </button>
+    <button fxHide.lt-md mat-button routerLink="/admin" *ngIf="user.isAdministrator">
+      Administrator
+    </button>
+    <button mat-icon-button (click)="actUser()" [matTooltip]="user.id + '(' + user.role.display + ')'">
+      <mat-icon>{{user.isAnonymous ? 'input' : 'person'}}</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
