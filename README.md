@@ -1,27 +1,51 @@
-# Prct
+# 環境構築
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
+1. nodeがinstall済み
 
-## Development server
+```bash
+node --version
+# v12.5.0以降（最新すぎると動かなくなる場合がある、その場合は敢えて古めのバージョンを入れてみてください。）
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+2. yarnをinstall
 
-## Code scaffolding
+```bash
+npm install -g yarn
+yarn --version
+# 1.12.3
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3. node_modulesを集める
 
-## Build
+```bash
+cd prct
+yarn install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+4. 起動
 
-## Running unit tests
+```bash
+yarn start
+# localhost:4200を開く
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+5. ユニットテスト
 
-## Running end-to-end tests
+```bash
+yarn test
+# or
+yarn test --code-coverage
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+6. e2eテスト(Selenium)
 
-## Further help
+```bash
+# javajdkが必要
+yarn e2e
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+7. デプロイ
+
+```bash
+yarn build
+```

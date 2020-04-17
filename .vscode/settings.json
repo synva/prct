@@ -1,0 +1,20 @@
+{
+  "javascript.format.enable": false,
+  "typescript.format.enable": false,
+  "html.format.enable": true,
+  "html.format.endWithNewline": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.eol": "\n",
+  "tslint.configFile": "tslint.json",
+  "beautify.options": {
+    "end_with_newline": true,
+    "eol": "\n"
+  }
+}
