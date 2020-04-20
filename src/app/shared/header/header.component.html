@@ -18,7 +18,8 @@
     <button fxHide.lt-md mat-button routerLink="/admin" *ngIf="user.isAdministrator">
       Administrator
     </button>
-    <button mat-icon-button (click)="actUser()" [matTooltip]="user.id + '(' + user.role.display + ')'">
+    <button mat-icon-button (click)="actUser()"
+      [matTooltip]="user.isAnonymous ? 'SignIn' : (user.id + '(' + user.role.display + ')')">
       <mat-icon>{{user.isAnonymous ? 'input' : 'person'}}</mat-icon>
     </button>
   </div>

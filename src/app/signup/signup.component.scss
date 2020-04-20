@@ -1,0 +1,33 @@
+.mat-card {
+  width: 300px;
+  height: 420px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+
+.mat-card-content {
+  padding-top: 50px;
+
+  .mat-form-field {
+    width: 100%;
+  }
+}
+
+.mat-card-actions {
+  margin-bottom: 0;
+}
+
+img {
+  position: absolute;
+  top: calc(50% - 260px);
+  left: calc(50% - 50px);
+  width: 100px;
+  background: #769ECB;
+  padding: 10px;
+  height: auto;
+  border-radius: 3px;
+}

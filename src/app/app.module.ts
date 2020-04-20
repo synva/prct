@@ -16,9 +16,15 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 
 import { MainComponent } from './main/main.component';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
 import { ErrorComponent } from './error/error.component';
 
 import { TopComponent } from './main/top/top.component';
+import { AdminComponent } from './main/admin/admin.component';
+import { ChargeComponent } from './main/charge/charge.component';
+import { SampleComponent } from './main/sample/sample.component';
+import { TreasureComponent } from './main/treasure/treasure.component';
 
 // services
 import { ApiService } from './services/api.service';
@@ -45,8 +51,14 @@ export const MY_FORMATS = {
   declarations: [
     AppComponent,
     MainComponent,
+    SigninComponent,
+    SignupComponent,
     ErrorComponent,
-    TopComponent
+    TopComponent,
+    AdminComponent,
+    ChargeComponent,
+    SampleComponent,
+    TreasureComponent
   ],
   imports: [
     BrowserModule,

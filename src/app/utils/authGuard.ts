@@ -28,7 +28,6 @@ export class AuthGuard implements CanActivate {
     } else {
       return this.userService.login().pipe(
         map(() => {
-          console.log('here');
           if (this.userService.user.checkAuthority(state.url)) {
             return true;
           } else {

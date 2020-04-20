@@ -33,22 +33,22 @@ export class UserService {
     );
   }
   login (): Observable<any> {
-    const loginObservable = new Observable((observer) => {
-      this.user.login({
-        _id: 'test',
-        password: '123456',
-        role: 0
-      });
-      observer.next();
-    });
-    return loginObservable;
-    // return this.apiService.get('/login').pipe(
-    //   map(data => {
-    //     if (data && data.user) {
-    //       this.user.login(data.user);
-    //     }
-    //   })
-    // );
+    // const loginObservable = new Observable((observer) => {
+    //   this.user.login({
+    //     _id: 'test',
+    //     password: '123456',
+    //     role: 0
+    //   });
+    //   observer.next();
+    // });
+    // return loginObservable;
+    return this.apiService.get('/login').pipe(
+      map(data => {
+        if (data && data.user) {
+          this.user.login(data.user);
+        }
+      })
+    );
   }
   logout (): Observable<void> {
     return this.apiService.get('/logout').pipe(
